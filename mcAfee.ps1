@@ -36,3 +36,11 @@ if(Get-ChildItem -File -Name mcupdate.exe -Path "c:\Program Files (x86)\McAfee\V
 
 
 Send-MailMessage -From meghashyam.sathyaarunpotta@invesco.com -To meghashyam.sathyaarunpotta@invesco.com -Subject "$env:COMPUTERNAME-McAfee Remediation-Complete" -SmtpServer "emailnasmtp.app.invesco.net"
+
+#foreach($serverName in Get-Content "\\houdata04\it services\DATA CENTER\Autosys\Working On\Arun\servers.txt"){
+#   Invoke-Command -FilePath "\\houdata04\it services\DATA CENTER\Autosys\Working On\Arun\mcafee.ps1"-ComputerName $serverName
+#}
+
+
+#copy -Path "\\houdata04\it services\DATA CENTER\Autosys\Working On\Arun\mcafee.ps1" -Destination "\\USHOUASYSW71VD\c$\"
+#Invoke-Command -FilePath "\\USHOUASYSW71VD\c$\mcafee.ps1"-ComputerName USHOUASYSW71VD
